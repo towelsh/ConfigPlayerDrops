@@ -1,0 +1,34 @@
+# For each cause of death, choose if items should be dropped
+# View more information about damage causes at https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/EntityDamageEvent.DamageCause.html#enum-constant-summary
+
+combat_logged: true
+player: true
+
+# "other" catches anything not specified below
+other: false
+
+# below is causes that are not directly caused by players
+# if a player caused the damage, e.g. projectile, the "player" handler above will override the value below
+block_explosion: true
+entity_explosion: false
+contact: false
+cramming: false
+custom: false
+drowning: false
+fire: true
+fire_tick: true
+freezing: false
+hot_floor: true
+kill: false
+lava: true
+lightning: false
+magic: false
+projectile: false
+sonic_boom: false
+starvation: false
+suffocation: true
+suicide: false
+thorns: false
+void: false
+wither: false
+world_border: false

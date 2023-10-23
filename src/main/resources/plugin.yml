@@ -1,0 +1,11 @@
+name: ConfigPlayerDrops
+version: '${project.version}'
+main: sh.towel.configplayerdrops.ConfigPlayerDrops
+api-version: '1.20'
+prefix: ConfigPlayerDrops
+author: towelsh
+description: Configure when players drop items
+website: https://towel.sh
+softdepend:
+  - "SirBlobmanCore"
+  - "CombatLogX"
