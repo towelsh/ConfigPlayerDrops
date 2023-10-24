@@ -1,6 +1,9 @@
+# Should we keep the player's exp too?
+keep_exp: true
+
 # For each cause of death, choose if items should be dropped
 # View more information about damage causes at https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/EntityDamageEvent.DamageCause.html#enum-constant-summary
-
+# Combat logging requires CombatLogX, if it is not installed this option will be ignored
 combat_logged: true
 player: true
 

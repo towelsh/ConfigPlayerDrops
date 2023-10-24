@@ -45,6 +45,14 @@ public class PlayerDeathListener implements Listener {
             e.setKeepInventory(false);
         } else {
             e.setKeepInventory(true);
+
+            if (config.getBoolean("keep_exp", true)) {
+                e.setShouldDropExperience(false);
+                e.setNewTotalExp(e.getPlayer().getTotalExperience());
+                e.setNewExp((int) (e.getPlayer().getExpToLevel() * e.getPlayer().getExp()));
+                e.setNewLevel(e.getPlayer().getLevel());
+            }
+
             e.getDrops().clear();
         }
     }
