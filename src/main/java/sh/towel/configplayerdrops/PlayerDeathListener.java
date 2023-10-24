@@ -31,10 +31,9 @@ public class PlayerDeathListener implements Listener {
 
         if (e.getPlayer().getKiller() == null) {
             // not directly killed by player
-            System.out.println("LDC: " + e.getPlayer().getLastDamageCause().getCause());
-            System.out.println("LDC lower: " + e.getPlayer().getLastDamageCause().getCause().toString().toLowerCase());
-            System.out.println("CONFIG : " + config.getBoolean(e.getPlayer().getLastDamageCause().getCause().toString().toLowerCase()));
-            return config.getBoolean(e.getPlayer().getLastDamageCause().getCause().toString().toLowerCase(), config.getBoolean("other"));
+            return config.getBoolean(
+                    e.getPlayer().getLastDamageCause().getCause().toString().toLowerCase(),
+                    config.getBoolean("other"));
         }  else {
             return config.getBoolean("player");
         }
